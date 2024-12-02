@@ -1,4 +1,14 @@
-import Image from "next/image";
+import '../../public/css/bootstrap.css';
+import '../../public/css/animate.css';
+import '../../public/css/swiper-bundle.css';
+import '../../public/css/slick.css';
+import '../../public/css/magnific-popup.css';
+// import '../../public/css/font-awesome-pro.css';
+import '../../public/css/flaticon_tecz.css';
+import '../../public/css/spacing.css';
+import '../../public/css/main.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
     return (
@@ -30,11 +40,9 @@ export default function Home() {
                         <div className="col-lg-6">
                             <div className="tp-banner-5-thumb">
                                 <div className="tp-banner-5-thumb-1">
-                                    <Image
+                                    <img
                                         src="/img/banner/five/banner-5-thumb-1.png"
                                         alt="Banner Thumbnail"
-                                        width={500}  // Use appropriate width
-                                        height={500} // Use appropriate height
                                     />
                                 </div>
                             </div>
@@ -68,14 +76,10 @@ export default function Home() {
                                     <div className="tp-feature-5-back">
                                         <div
                                             className="tp-feature-5-back-bg"
-                                            style={{
-                                                backgroundImage: "url('assets/img/feature/five/feature-5-thumb-1.jpg')",
-                                            }}
+                                            data-background="/img/feature/five/feature-5-thumb-1.jpg" // Changed from style to data-background
                                         >
                                             <div className="tp-feature-5-back-content text-center">
-                                                <p>
-                                                    We’re a team of creatives who are excited about unique ideas
-                                                </p>
+                                                <p>We’re a team of creatives who are excited about unique ideas</p>
                                                 <a href="services-details.html">Find Your Solution</a>
                                             </div>
                                         </div>
@@ -101,7 +105,7 @@ export default function Home() {
                                         <div
                                             className="tp-feature-5-back-bg"
                                             style={{
-                                                backgroundImage: "url('assets/img/feature/five/feature-5-thumb-1.jpg')",
+                                                backgroundImage: "url('/img/feature/five/feature-5-thumb-1.jpg')",
                                             }}
                                         >
                                             <div className="tp-feature-5-back-content text-center">
@@ -131,7 +135,7 @@ export default function Home() {
                                         <div
                                             className="tp-feature-5-back-bg"
                                             style={{
-                                                backgroundImage: "url('assets/img/feature/five/feature-5-thumb-1.jpg')",
+                                                backgroundImage: "url('/img/feature/five/feature-5-thumb-1.jpg')",
                                             }}
                                         >
                                             <div className="tp-feature-5-back-content text-center">
@@ -148,7 +152,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="tp-feature-5-shape-1">
-                    <Image src="/img/shape/line-5-shape-1.png" alt="shape" width={120} height={60} />
+                    <img src="/img/shape/line-5-shape-1.png" alt="shape" width={120} height={60} />
                 </div>
             </section>
 
@@ -158,20 +162,16 @@ export default function Home() {
                         <div className="col-xxl-7 col-xl-6 col-lg-6 order-2 order-lg-1">
                             <div className="tp-benifits-5-thumb">
                                 <div className="tp-benifits-5-thumb-1">
-                                    <Image
+                                    <img
                                         src="/img/about/five/about-5-thumb-1.jpg"
                                         alt="About Image 1"
-                                        width={500}
-                                        height={350}
                                     />
                                 </div>
                                 <div className="tp-benifits-5-thumb-2 overlay-anim">
                                     <div className="tp-thumb-common-overlay-red wow"></div>
-                                    <Image
+                                    <img
                                         src="/img/about/five/about-5-thumb-2.jpg"
                                         alt="About Image 2"
-                                        width={500}
-                                        height={350}
                                     />
                                 </div>
                                 <div className="tp-benifits-5-wrap">
@@ -237,7 +237,7 @@ export default function Home() {
                                     </div>
                                     <div className="tp-about-avatar d-flex align-items-center mb-10">
                                         <div className="tp-about-avatar-thumb">
-                                            <Image
+                                            <img
                                                 src="/img/about/one/avatar-1.png"
                                                 alt="Avatar"
                                                 width={50}
@@ -256,92 +256,361 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="project-area tp-project-4 fix pb-120 pt-115">
-                <div
-                    className="tp-project-4-bg"
-                    style={{
-                        backgroundImage: "url('/img/project/five/project-5-bg-1.jpg')",
-                    }}
-                ></div>
+            {/* Pricing Section */}
+            <section className="pricing-area tp-price-wrap pb-80">
                 <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-xl-5 col-lg-6 col-md-8">
-                            <div className="tp-section tp-section-red mb-65">
-                                <span className="tp-section-sub-title">Recently Completed Work</span>
-                                <h4 className="tp-section-title">Improve & Enhance the Tech Projects</h4>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="tp-section tp-section-red mb-65 text-center">
+                                <span className="tp-section-sub-title">Our pricing plans</span>
+                                <h4 className="tp-section-title">Choose Your Optimal <br /> Pricing Plans</h4>
                             </div>
                         </div>
-                        <div className="col-xl-7 col-lg-6 col-md-4">
-                            <div className="tp-project-4-button text-center text-lg-end">
-                                <a href="projects.html" className="tp-btn-red">
-                                    View All Projects
-                                </a>
+                    </div>
+                    <div className="row">
+                        {/* Basic Plan */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="tp-price mb-40 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">
+                                <div className="tp-price-thumb">
+                                    <img src="/img/pricing/pricing-thumb-1.jpg" alt="Basic Plan" />
+                                </div>
+                                <div className="tp-price-icon mb-20">
+                                    <i className="flaticon-airplane"></i>
+                                </div>
+                                <div className="tp-price-badge mb-20">
+                                    <span>Basic Plan</span>
+                                </div>
+                                <div className="tp-price-heading mb-40">
+                                    <div className="tp-price-content">
+                                        <h4 className="tp-price-value">$49<span>/monthly</span></h4>
+                                    </div>
+                                </div>
+                                <div className="tp-price-features mb-45">
+                                    <ul>
+                                        <li>24/7 System monitoring</li>
+                                        <li className="tp-price-inactive">Security management</li>
+                                        <li className="tp-price-inactive">Unlimited Download</li>
+                                        <li>Remote support</li>
+                                    </ul>
+                                </div>
+                                <div className="tp-price-btn">
+                                    <a href="contact.html">Start Free Trial</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Standard Plan */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="tp-price active mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                                <div className="tp-price-thumb">
+                                    <img src="/img/pricing/pricing-thumb-2.jpg" alt="Standard Plan" />
+                                </div>
+                                <div className="tp-price-icon mb-20">
+                                    <i className="flaticon-rocket"></i>
+                                </div>
+                                <div className="tp-price-badge mb-20">
+                                    <span>Standard Plan</span>
+                                </div>
+                                <div className="tp-price-heading mb-40">
+                                    <div className="tp-price-content">
+                                        <h4 className="tp-price-value">$59<span>/monthly</span></h4>
+                                    </div>
+                                </div>
+                                <div className="tp-price-features mb-45">
+                                    <ul>
+                                        <li>24/7 System monitoring</li>
+                                        <li className="tp-price-inactive">Security management</li>
+                                        <li>Unlimited Download</li>
+                                        <li className="tp-price-inactive">Remote support</li>
+                                    </ul>
+                                </div>
+                                <div className="tp-price-btn">
+                                    <a href="contact.html">Start Free Trial</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Premium Plan */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="tp-price mb-40 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">
+                                <div className="tp-price-thumb">
+                                    <img src="/img/pricing/pricing-thumb-3.jpg" alt="Premium Plan" />
+                                </div>
+                                <div className="tp-price-icon mb-20">
+                                    <i className="flaticon-speed"></i>
+                                </div>
+                                <div className="tp-price-badge mb-20">
+                                    <span>Premium plan</span>
+                                </div>
+                                <div className="tp-price-heading mb-40">
+                                    <div className="tp-price-content">
+                                        <h4 className="tp-price-value">$89<span>/monthly</span></h4>
+                                    </div>
+                                </div>
+                                <div className="tp-price-features mb-45">
+                                    <ul>
+                                        <li>24/7 System monitoring</li>
+                                        <li>Security management</li>
+                                        <li>Unlimited Download</li>
+                                        <li>Remote support</li>
+                                    </ul>
+                                </div>
+                                <div className="tp-price-btn">
+                                    <a href="contact.html">Start Free Trial</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="tp-project-4-list">
-                    <div className="container-fluid">
-                        <div className="row gx-0">
-                            <div className="col-xl-4 col-lg-4 col-md-6">
-                                <div className="tp-project-4-item mb-30 wow fadeInUp">
-                                    <div className="tp-project-4-thumb">
-                                        <a href="projects-details.html">
-                                            <Image
-                                                src="/img/project/five/project-5-1.jpg"
-                                                alt="Project 1"
-                                                width={500}
-                                                height={350}
-                                            />
-                                        </a>
+                <div className="tp-price-shape-1">
+                    <img src="/img/shape/line-5-shape-2.png" alt="Shape" />
+                </div>
+            </section>
+
+            {/* Services Section */}
+            <section className="services-area tp-services-5-bg pt-115 pb-70" style={{ backgroundImage: 'url(/images/services-bg.jpg)' }}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="tp-section tp-section-red-white text-center mb-50">
+                                <span className="tp-section-sub-title">What We Provide</span>
+                                <h4 className="tp-section-title">We Provide our Clients <br /> Best IT Services</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {/* Consultancy Service */}
+                        <div className="col-lg-3 col-md-6">
+                            <div className="tp-services-5 mb-40">
+                                <div className="tp-services-5-icon mb-25">
+                                    <i className="flaticon-consultant"></i>
+                                </div>
+                                <div className="tp-services-5-content">
+                                    <h5 className="tp-services-5-title under-line-white mb-25">
+                                        <a href="services-details.html">Consultancy</a>
+                                    </h5>
+                                    <p>A consulting firm or consultancy <br /> provides expertise in various areas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Development Service */}
+                        <div className="col-lg-3 col-md-6">
+                            <div className="tp-services-5 mb-40">
+                                <div className="tp-services-5-icon mb-25">
+                                    <i className="flaticon-coding"></i>
+                                </div>
+                                <div className="tp-services-5-content">
+                                    <h5 className="tp-services-5-title under-line-white mb-25">
+                                        <a href="services-details.html">Development</a>
+                                    </h5>
+                                    <p>We offer software development services <br /> tailored to your business needs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Marketing Service */}
+                        <div className="col-lg-3 col-md-6">
+                            <div className="tp-services-5 mb-40">
+                                <div className="tp-services-5-icon mb-25">
+                                    <i className="flaticon-advertisig-agency"></i>
+                                </div>
+                                <div className="tp-services-5-content">
+                                    <h5 className="tp-services-5-title under-line-white mb-25">
+                                        <a href="services-details.html">Marketing</a>
+                                    </h5>
+                                    <p>Helping businesses reach their target audience <br /> through innovative strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Software Service */}
+                        <div className="col-lg-3 col-md-6">
+                            <div className="tp-services-5 mb-40">
+                                <div className="tp-services-5-icon mb-25">
+                                    <i className="flaticon-solution"></i>
+                                </div>
+                                <div className="tp-services-5-content">
+                                    <h5 className="tp-services-5-title under-line-white mb-25">
+                                        <a href="services-details.html">Software</a>
+                                    </h5>
+                                    <p>We provide software solutions to streamline <br /> your business processes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="brand-area mb-80">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="tp-brand-5-wrap text-center mb-95">
+                                <h5 className="tp-brand-5-wrap-title">Who Trust Us</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row gx-0">
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <div className="tp-brand-5-item mb-40 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".7s">
+                                <div className="tp-brand-5-thumb">
+                                    <img src="/img/brand/five/brand-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-brand-5-item-logo text-center">
+                                    <img src="/img/brand/five/brand-5-logo-2.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <div className="tp-brand-5-item mb-40 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                                <div className="tp-brand-5-thumb">
+                                    <img src="/img/brand/five/brand-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-brand-5-item-logo text-center">
+                                    <img src="/img/brand/five/brand-5-logo-1.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <div className="tp-brand-5-item mb-40 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                                <div className="tp-brand-5-thumb">
+                                    <img src="/img/brand/five/brand-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-brand-5-item-logo text-center">
+                                    <img src="/img/brand/five/brand-5-logo-3.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <div className="tp-brand-5-item mb-40 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".7s">
+                                <div className="tp-brand-5-thumb">
+                                    <img src="/img/brand/five/brand-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-brand-5-item-logo text-center">
+                                    <img src="/img/brand/five/brand-5-logo-4.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="blog-area tp-blog-5 pb-90 pt-120">
+                <div className="tp-blog-5-bg" data-background="/img/blog/five/blog-5-bg-1.jpg"> </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="tp-section tp-section-red text-center mb-35">
+                            <span className="tp-section-sub-title">Our Latest Update</span>
+                            <h4 className="tp-section-title">Check Our Inside Story</h4>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="tp-blog-5-item mb-30 tp-thumb-common fix">
+                                <div className="tp-thumb-common-overlay-red wow"></div>
+                                <div className="tp-blog-5-thumb">
+                                    <img src="/img/blog/five/blog-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-blog-5-content">
+                                    <div className="tp-blog-5-content-post d-flex align-items-center">
+                                        <div className="tp-blog-5-content-post-icon">
+                                            <i className="flaticon-manufacturing"></i>
+                                        </div>
+                                        <div className="tp-blog-5-content-post-content">
+                                            <p>Posted by</p>
+                                            <span>Tecz</span>
+                                        </div>
                                     </div>
-                                    <div className="tp-project-4-content">
-                                        <h5>
-                                            <a href="projects-details.html">IT Consulting & Solutions</a>
+                                    <div className="tp-blog-5-content-main">
+                                        <div className="tp-blog-5-content-info d-flex align-items-center mb-20">
+                                            <div className="tp-blog-5-content-info-item mr-35">
+                                                <span><i className="flaticon-user"></i> Salim Rana</span>
+                                            </div>
+                                            <div className="tp-blog-5-content-info-item">
+                                                <span><i className="fa-light fa-message"></i> 1 Comment</span>
+                                            </div>
+                                        </div>
+                                        <h5 className="tp-blog-5-title mb-30">
+                                            <a href="blog-details.html">The highly creative UI from a silicon valley</a>
                                         </h5>
-                                        <span>Technology</span>
+                                        <div className="tp-blog-5-tags">
+                                            <a href="blog-details.html">Digital</a>
+                                            <a href="blog-details.html">Cyber</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="col-xl-4 col-lg-4 col-md-6">
-                                <div className="tp-project-4-item mb-30 wow fadeInUp">
-                                    <div className="tp-project-4-thumb">
-                                        <a href="projects-details.html">
-                                            <Image
-                                                src="/img/project/five/project-5-2.jpg"
-                                                alt="Project 2"
-                                                width={500}
-                                                height={350}
-                                            />
-                                        </a>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="tp-blog-5-item mb-30 tp-thumb-common fix">
+                                <div className="tp-thumb-common-overlay-red wow"></div>
+                                <div className="tp-blog-5-thumb">
+                                    <img src="/img/blog/five/blog-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-blog-5-content">
+                                    <div className="tp-blog-5-content-post d-flex align-items-center">
+                                        <div className="tp-blog-5-content-post-icon">
+                                            <i className="flaticon-manufacturing"></i>
+                                        </div>
+                                        <div className="tp-blog-5-content-post-content">
+                                            <p>Posted by</p>
+                                            <span>Tecz</span>
+                                        </div>
                                     </div>
-                                    <div className="tp-project-4-content">
-                                        <h5>
-                                            <a href="projects-details.html">Custom Web Development</a>
+                                    <div className="tp-blog-5-content-main">
+                                        <div className="tp-blog-5-content-info d-flex align-items-center mb-20">
+                                            <div className="tp-blog-5-content-info-item mr-35">
+                                                <span><i className="flaticon-user"></i> Salim Rana</span>
+                                            </div>
+                                            <div className="tp-blog-5-content-info-item">
+                                                <span><i className="fa-light fa-message"></i> 2 Comments</span>
+                                            </div>
+                                        </div>
+                                        <h5 className="tp-blog-5-title mb-30">
+                                            <a href="blog-details.html">Exploring the power of AI in modern tech</a>
                                         </h5>
-                                        <span>Technology</span>
+                                        <div className="tp-blog-5-tags">
+                                            <a href="blog-details.html">AI</a>
+                                            <a href="blog-details.html">Tech</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="col-xl-4 col-lg-4 col-md-6">
-                                <div className="tp-project-4-item mb-30 wow fadeInUp">
-                                    <div className="tp-project-4-thumb">
-                                        <a href="projects-details.html">
-                                            <Image
-                                                src="/img/project/five/project-5-3.jpg"
-                                                alt="Project 3"
-                                                width={500}
-                                                height={350}
-                                            />
-                                        </a>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="tp-blog-5-item mb-30 tp-thumb-common fix">
+                                <div className="tp-thumb-common-overlay-red wow"></div>
+                                <div className="tp-blog-5-thumb">
+                                    <img src="/img/blog/five/blog-5-thumb-1.jpg" alt="" />
+                                </div>
+                                <div className="tp-blog-5-content">
+                                    <div className="tp-blog-5-content-post d-flex align-items-center">
+                                        <div className="tp-blog-5-content-post-icon">
+                                            <i className="flaticon-manufacturing"></i>
+                                        </div>
+                                        <div className="tp-blog-5-content-post-content">
+                                            <p>Posted by</p>
+                                            <span>Tecz</span>
+                                        </div>
                                     </div>
-                                    <div className="tp-project-4-content">
-                                        <h5>
-                                            <a href="projects-details.html">Cybersecurity Protection</a>
+                                    <div className="tp-blog-5-content-main">
+                                        <div className="tp-blog-5-content-info d-flex align-items-center mb-20">
+                                            <div className="tp-blog-5-content-info-item mr-35">
+                                                <span><i className="flaticon-user"></i> Salim Rana</span>
+                                            </div>
+                                            <div className="tp-blog-5-content-info-item">
+                                                <span><i className="fa-light fa-message"></i> 3 Comments</span>
+                                            </div>
+                                        </div>
+                                        <h5 className="tp-blog-5-title mb-30">
+                                            <a href="blog-details.html">Innovations in cloud computing for businesses</a>
                                         </h5>
-                                        <span>Technology</span>
+                                        <div className="tp-blog-5-tags">
+                                            <a href="blog-details.html">Cloud</a>
+                                            <a href="blog-details.html">Business</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

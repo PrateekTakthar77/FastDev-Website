@@ -10,6 +10,7 @@ import '../../public/css/main.css';
 
 import Navbar from "src/components/navbar"; // Using alias if you've set it up, or keep the relative path if not
 import Footer from "src/components/footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function RootLayout({ children }) {
     return (
